@@ -5,16 +5,31 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    page: 'login',
-    isLogged: false
+    page: 'home',
+    isLogged: false,
+    user: { 
+      id: '',
+      nom: '',
+      prenom: '',
+      email: '',
+      password: '',
+      isAdmin: '0'
+      } // fin user
   },
   getters: {
+    getPage: state => {
+      return state.page
+    },
     getIsLogged: state => {
       return state.isLogged
     },
-    getPage: state => {
-      return state.page
-    }
+    getIsAdmin: state => {
+      return state.isAdmin
+    },
+    getUser: state => {
+      return state.user
+    },
+
   },
   mutations: {
     changePage (state, page2Display) {
@@ -22,6 +37,9 @@ export default new Vuex.Store({
     },
     changeLog (state, newlog) {
       state.isLogged = newlog
+    },
+    changeUser (state, newuser) {
+      state.user = newuser
     }
   },
   actions: {}

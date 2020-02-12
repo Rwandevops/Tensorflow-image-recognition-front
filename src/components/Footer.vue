@@ -1,7 +1,6 @@
 <template>
   <div class="footer">
-    <div>Designed by Rwanito</div>
-    <div>All comments have to be paid in beer</div>
+    <div>Designed by Rwanito - All comments have to be paid in beer</div>
   </div>
 </template>
 
@@ -14,9 +13,7 @@ export default {
 
 <style>
 .footer {
-  background-color: lightgrey;
   margin: 10px;
-  font-size: 30px;
-  color: black;
+  font-size: 20px;
 }
 </style>

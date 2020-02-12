@@ -22,7 +22,7 @@
 <script>
 import Vue from 'vue'
 import VueResource from 'vue-resource'
-// import axios from 'axios'
+import axios from 'axios'
 
 Vue.use(VueResource)
 
@@ -40,11 +40,11 @@ export default {
   methods: {
     register (newUser) {
       this.$store.commit('changePage', 'login')
-      // axios.post('http://127.0.0.1:8081/user', newUser)
-      //   .then(response => {
-      //     console.log('res', response)
-      //   })
-      //   .catch(error => { console.log(JSON.stringify(error)) })
+      axios.post('http://127.0.0.1:8081/user', newUser)
+        .then(response => {
+          console.log('res', response)
+        })
+        .catch(error => { console.log(JSON.stringify(error)) })
     } // fin register
   } // fin methods
 }
@@ -53,7 +53,5 @@ export default {
 <style>
   .register{
     margin: 10px;
-    background-color: white;
-    color: black;
   }
 </style>

@@ -23,7 +23,6 @@
 
 <script>
 import axios from 'axios'
-
 export default {
   name: 'Tensorflow',
   data () {
@@ -40,8 +39,10 @@ export default {
         )
         this.results = []
         response.data.forEach(data =>
-          this.results.push(data)
-        )
+          {
+            this.results.push(data)
+            console.log(this.results)
+          })
       } catch (err) {
         console.log(JSON.stringify(err))
       }
@@ -52,26 +53,18 @@ export default {
 
 <style>
 .tensorflow {
-  background-color: lightgrey;
-  color: black;
   justify-content: center;
 }
-
 .container{
   display: flex;
   justify-content: space-around;
 }
 img {
-  max-width: 70%;
+  max-width: 50%;
+  margin: auto;
 }
 table {
+  margin: auto;
   text-align: center;
 }
-th {
-  background-color: aquamarine;
-}
-td {
-  background-color: lightgreen;
-}
-
 </style>

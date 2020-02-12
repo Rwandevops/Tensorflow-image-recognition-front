@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header ></Header>
+    <Header />
     <Navbar />
     <Main />
     <Footer/>
@@ -24,7 +24,14 @@ export default {
   data () {
     return {
       page: 'page',
-      isLogged: false
+      isLogged: false,
+      isAdmin: false,
+      user: {
+        nom: '',
+        prenom: '',
+        email: '',
+        password: ''
+      }
     }
   }
 }
@@ -35,7 +42,13 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch; 
   text-align: center;
-  color: #2c3e50;
+  background-color: lightgrey;
+  color: black;
+  margin: 0;
+  padding: 0;
 }
 </style>
